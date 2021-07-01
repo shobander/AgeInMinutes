@@ -74,7 +74,7 @@
         />
 
     <TextView
-        android:id="@+id/SelectedDateInMinutes"
+        android:id="@+id/tvSelectedDateInMinutes"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_marginTop="20sp"
