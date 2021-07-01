@@ -40,15 +40,21 @@ class MainActivity : AppCompatActivity() {
 
                 val theDate = sdf.parse(selectedDate)
 
-                val selectedDateInMinutes = theDate!!.time / 60000
+                // 60 mins * 1000 millisecs = 60000
+                //val selectedDateInMinutes = theDate!!.time / 60000
+
+                val selectedDateInDays = theDate!!.time / 86400000
 
                 val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
 
-                val currentDateInMinutes = currentDate!!.time / 60000
+                //val currentDateInMinutes = currentDate!!.time / 60000
+                val currentDateInDays = currentDate!!.time / 86400000
 
-                val differenceInMinutes = currentDateInMinutes - selectedDateInMinutes
+                //val differenceInMinutes = currentDateInMinutes - selectedDateInMinutes
+                val differenceInDays = currentDateInDays - selectedDateInDays
 
-                tvSelectedDateInMinutes.setText(differenceInMinutes.toString())
+                //tvSelectedDateInMinutes.setText(differenceInMinutes.toString())
+                tvSelectedDateInDays.setText(differenceInDays.toString())
 
             }
             ,year
